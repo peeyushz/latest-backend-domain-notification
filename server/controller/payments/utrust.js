@@ -82,8 +82,8 @@ exports.createUtrustPayment = async (req, res) => {
                                         }
                                     },
                                     "return_urls": {
-                                        "return_url": "https://domain-notification-tool.web.app/payment-successful",
-                                        "cancel_url": "https://domain-notification-tool.web.app/payment-failed",
+                                        "return_url": `${process.env.YOUR_DOMAIN}/payment-successful`,
+                                        "cancel_url": `${process.env.YOUR_DOMAIN}/payment-failed`,
                                         "callback_url": "https://pink-super-whale.cyclic.app/api/stripe-callback"
                                     },
                                     "line_items": [
