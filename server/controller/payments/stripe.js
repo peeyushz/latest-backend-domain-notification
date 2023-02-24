@@ -52,8 +52,8 @@ const createStripePayUrl = async (userId, planName, orderId, amount) => {
                 }
             ],
             mode: 'payment',
-            success_url: `${YOUR_DOMAIN}/success`,
-            cancel_url: `${YOUR_DOMAIN}/failed`,
+            success_url: `${process.env.YOUR_DOMAIN}/payment-successful`,
+            cancel_url: `${process.env.YOUR_DOMAIN}/payment-failed`,
             customer: customer.id
         });
         if (session && "url" in session) {
