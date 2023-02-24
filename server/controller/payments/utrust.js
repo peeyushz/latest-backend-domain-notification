@@ -82,9 +82,9 @@ exports.createUtrustPayment = async (req, res) => {
                                         }
                                     },
                                     "return_urls": {
-                                        "return_url": "http://techyroots.com:6003/success",
-                                        "cancel_url": "http://techyroots.com:6003/failed",
-                                        "callback_url": "http://techyroots.com:6003/callback"
+                                        "return_url": "https://domain-notification-tool.web.app/payment-successful",
+                                        "cancel_url": "https://domain-notification-tool.web.app/payment-failed",
+                                        "callback_url": "https://pink-super-whale.cyclic.app/api/stripe-callback"
                                     },
                                     "line_items": [
                                         {
