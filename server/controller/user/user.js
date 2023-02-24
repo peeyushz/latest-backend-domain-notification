@@ -9,7 +9,7 @@ const jwtModel = require('../../models/jwtModel');
 const emailSender = require("../email/email")
 const ObjectId = mongoose.Types.ObjectId;
 
-exports.isUserExists = async(userId) => {
+const isUserExists = exports.isUserExists = async(userId) => {
     const userCount = await userModel.find({_id:ObjectId(userId)}).countDocuments();
     if(userCount == 1){
         return true;
