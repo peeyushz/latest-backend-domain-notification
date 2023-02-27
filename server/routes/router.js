@@ -50,6 +50,7 @@ route.get("/api/get-plans-data", getPlansData);
 route.post("/api/pay-with-utrust", jwtRoute.verifyToken,utrustRoute.createUtrustPayment);
 route.post("/api/utrust-callback", utrustRoute.paymentUpdate);
 route.post("/api/pay-with-stripe", jwtRoute.verifyToken, stripeRoute.createCheckOutSessionForStripe);
+route.post("/api/stripe-callback", stripeRoute.stripeWebHook);
 
 
 // route.get("/getDomainData", fetchData.getDomainData);
