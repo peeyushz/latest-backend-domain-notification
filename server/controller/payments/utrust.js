@@ -84,7 +84,7 @@ exports.createUtrustPayment = async (req, res) => {
                                     "return_urls": {
                                         "return_url": `${process.env.YOUR_DOMAIN}/payment-successful`,
                                         "cancel_url": `${process.env.YOUR_DOMAIN}/payment-failed`,
-                                        "callback_url": "https://pink-super-whale.cyclic.app/api/stripe-callback"
+                                        "callback_url": "https://pink-super-whale.cyclic.app/api/utrust-callback"
                                     },
                                     "line_items": [
                                         {
