@@ -163,6 +163,7 @@ exports.createUtrustPayment = async (req, res) => {
 exports.paymentUpdate = async (req, res) => {
     try {
         const data = req.body;
+        console.log(req.body);
         const joined_payload = "event_type" + data.event_type + "resourceamount" + data.resource.amount + "resourcecurrency" + data.resource.currency + "resourcereference" + data.resource.reference + "state" + data.state + ""
         const payloadSignature = data.signature;
         const signedSignature = CryptoJS.enc.Hex.stringify(CryptoJS.HmacSHA256(joined_payload, process.env.UTRUST_SECRET));
