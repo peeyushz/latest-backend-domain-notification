@@ -9,6 +9,7 @@ const Crypto = require("../../helpers/encrypt")
 
 var send_mails = exports.send_mails = (to_mail, subj, htmlBody)=>{
     try {
+        console.log(process.env.mail_from,process.env.mail_pass);
         return new Promise(function(Resolve, Reject) {
             let transporter = nodemailer.createTransport({
                 service: 'gmail',
